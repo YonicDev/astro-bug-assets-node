@@ -7,6 +7,8 @@ import DogCat from '../assets/dog-cat.png'
 
 import Layout from '../layouts/Layout.astro';
 
+export const prerender = true;
+
 const CatPic = await getImage({src: Cat, width: 600, quality: 70, format: "avif"})
 const CatPicWebp = await getImage({src: Cat, width: 600, quality: 80, format: "webp"})
 const CatPicJpg = await getImage({src: Cat, width: 600, quality: 80, format: "jpg"})
