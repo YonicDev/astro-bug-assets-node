@@ -7,6 +7,8 @@ import DogCat from '../assets/dog-cat.png'
 
 import Layout from '../layouts/Layout.astro';
 
+export const prerender = true;
+
 const CatPic = await getImage({src: Cat, width: 600, quality: 70, format: "avif"})
 const CatPicWebp = await getImage({src: Cat, width: 600, quality: 80, format: "webp"})
 const CatPicJpg = await getImage({src: Cat, width: 600, quality: 80, format: "jpg"})
@@ -18,7 +20,6 @@ const CatPicJpg = await getImage({src: Cat, width: 600, quality: 80, format: "jp
 		<h1>Can you see the images?</h1>
 		<center>
 			<p>If you can see them, great!</p>
-			<p>If not, <a href="/prerendered">Check the prerendered version of this page.</a></p>
 			<Image src={Dog} alt="You can't see the dog :(" width={600} />
 			<picture>
 				<source srcset={CatPic.src} type="image/avif" />
