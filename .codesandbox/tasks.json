@@ -10,8 +10,14 @@
       "command": "yarn build"
     },
     {
-      "name": "Start Dev Server",
+      "name": "Start Deployment Server",
       "command": "node ./dist/server/entry.mjs"
     }
-  ]
+  ],
+  "tasks": {
+    "start-deploy": {
+      "name": "Start deployment server",
+      "command": "node ./dist/server/entry.mjs"
+    }
+  }
 }
